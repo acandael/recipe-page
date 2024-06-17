@@ -1,0 +1,8 @@
+:root{
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: Eggshell: hsl(30, 54%, 90%);
+  --light-gray: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+}
