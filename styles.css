@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "Outfit";
-  src: local("Outfit"),
-    url("assets/fonts/outfit/static/Outfit-Regular.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Young Serif";
-  src: local("Young Serif"),
-    url("assets/fonts/young-serif/YoungSerif-Regular.ttf") format("ttf");
-}
-
 :root {
   --white: hsl(0, 0%, 100%);
   --rose-white: hsl(330, 100%, 98%);
@@ -62,32 +50,26 @@ img {
 }
 
 h1 {
+  margin-bottom: 24px;
   color: var(--dark-charcoal, #312e2c);
   font-family: "Young Serif";
-  font-size: 40px;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 40px */
 }
 
-header.p {
+p {
   color: var(--wenge-brown, #5f564d);
-  align-self: stretch;
-  font-family: Outfit;
+  font-family: "Outfit";
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
 
-section p {
-  color: var(--wenge-brown, #5f564d);
-
-  font-family: "Outfit";
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 24px */
+section {
+  margin-top: 32px;
 }
 
 section.preparation {
@@ -136,6 +118,7 @@ section.ingredients {
   align-items: flex-start;
   /* gap: 24px; */
   align-self: stretch;
+  margin-top: 32px;
 }
 
 h2 {
@@ -182,28 +165,29 @@ section.instructions {
 }
 
 section.instructions ol {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  align-self: stretch;
+  list-style: none;
+  counter-reset: item;
+  margin-left: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-style: normal;
 }
 
 section.instructions ol li {
-  display: flex;
-  padding-left: 16px;
-  align-items: flex-start;
-  gap: 16px;
-  align-self: stretch;
+  counter-increment: item;
+  margin-bottom: 8px;
 }
 
-section.instructions p {
-  line-height: 150%; /* 24px */
-  display: flex;
-  padding-left: 8px;
-  align-items: flex-start;
-  gap: 16px;
-  align-self: stretch;
+section.instructions ol li:before {
+  display: inline-block;
+  width: 1.5rem;
+  margin-left: 0;
+  content: counter(item) ".";
+  color: var(--brandy-red, #854632);
+  font-family: "Outfit";
+  font-weight: 700;
 }
 
 section.nutrition {
