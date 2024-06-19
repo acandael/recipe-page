@@ -141,6 +141,7 @@ section.ingredients ul {
   align-items: flex-start;
   gap: 8px;
   align-self: stretch;
+  margin-top: 24px;
 }
 
 section.ingredients ul li {
